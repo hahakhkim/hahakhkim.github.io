@@ -1,14 +1,14 @@
-title:             Clean Blog
-email:             your-email@example.com
+title:             Kihyun Kim
+email:             haha802@naver.com
 description:       A Blog Theme by Start Bootstrap
-author:            Start Bootstrap
-baseurl:           "/startbootstrap-clean-blog-jekyll"
-url:               "http://blackrockdigital.github.io"
+author:            Kihyun Kim
+baseurl:           "/main"
+url:               "http://hahakhkim.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
-github_username:   BlackrockDigital
-facebook_username: StartBootstrap
+twitter_username:  
+github_username:   hahakhkim
+facebook_username: 
 
 # Build settings
 markdown:          kramdown
