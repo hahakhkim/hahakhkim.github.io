@@ -2,6 +2,13 @@
 layout: default
 ---
 <style type="text/css">
+	body{
+		background: -webkit-linear-gradient(left,rgb(240,240,255),rgb(255,240,240));
+		background: -o-linear-gradient(left,rgb(240,240,255),rgb(255,240,240));
+		background: -moz-linear-gradient(left,rgb(240,240,255)),rgb(255,240,240));
+		background: linear-gradient(left,rgb(240,240,255),rgb(255,240,240));		
+		background-color: rgb(245,245,255);
+	}
     .namebox { padding: 30px 30px;  border-radius: 15px; color:white;background-color:rgba(0,0,30,0.5);}
 </style>
 <!-- Page Header -->
@@ -26,43 +33,29 @@ layout: default
     </div>
   </header>
 
-  <div class="container">
+  <div class="container" ">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-12 col-md-12 mx-auto">
+ 		<article style="background-color:white;font-size:80px;text-align:center;">
+	      <i class="fa fa-lightbulb-o"></i>
+ 		  <h1 style="text-align:center"> Research Interests</h1>
+		
+		</article>
+        <hr>
+		<article style="background-color:white;font-size:80px;text-align:center;">
+		  <i class="fa fa-graduation-cap"></i>		
+		  <h1 style="text-align:center">Education</h1>
 
-        {{ content }}
+		
+		</article>
+        <hr>
+	    <article style="background-color:white;font-size:80px;text-align:center;">
+		<i class="fa fa-building-o"></i>
+		<h1 style="text-align:center">Work Experience</h1>
 
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-          <article class="post-preview">
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-              <h2 class="post-title">{{ post.title }}</h2>
-              {% if post.subtitle %}
-                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-              {% else %}
-                <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-              {% endif %}
-            </a>
-            <p class="post-meta">Posted by
-              {% if post.author %}
-                {{ post.author }}
-              {% else %}
-                {{ site.author }}
-              {% endif %}
-              on
-              {{ post.date | date: '%B %d, %Y' }}</p>
-          </article>
-
-          <hr>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
-
+		
+		</article>
+		<hr>
       </div>
     </div>
   </div>
