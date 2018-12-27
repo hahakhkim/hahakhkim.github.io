@@ -1,22 +1,25 @@
 ---
 layout: default
 ---
-
+<style type="text/css">
+    #namebox { padding: 30px 30px;height:100%;  border-radius: 15px; color:white;background-color:rgba(0,0,30,0.5);}
+</style>
 <!-- Page Header -->
 {% if page.background %}
-  <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  <header class="masthead" style="height:500px;background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
     <header class="masthead">
     {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-              <span class="subheading">{{ site.description }}</span>
-            {% endif %}
+    <div class="container" style="height:500px;">
+      <div class="row"style="position:relative;top:25%;">
+        <div class="col-lg-7 col-md-7 mx-auto">
+          <div id="namebox">
+			<img src='/img/profile.png' style="margin-right:30px; float:left; width:160px">
+			<h2 style= "margin-top:0px;margin-bottom:15px;"> KI-HYUN KIM </h2>
+			<h5> Undergraduate Student </h5>
+			<h6> Dept. of Electrical and Computer Engineering <br> Seoul National University <br><br>
+		      <i class="fa fa-envelope"></i>
+			  haha802@naver.com</h6>
           </div>
         </div>
       </div>
