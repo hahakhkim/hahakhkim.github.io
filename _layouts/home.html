@@ -1,22 +1,45 @@
 ---
 layout: default
 ---
-
+<style type="text/css">
+	body{
+		background: -webkit-linear-gradient(right,rgb(240,240,255),rgb(255,240,240));
+		background: -o-linear-gradient(right,rgb(240,240,255),rgb(255,240,240));
+		background: -moz-linear-gradient(right,rgb(240,240,255)),rgb(255,240,240));
+		background: linear-gradient(right,rgb(240,240,255),rgb(255,240,240));		
+		background-color: rgb(245,245,255);
+		
+	}
+	h4.custom0{
+		color:rgba(80,80,80,0.8);
+		font-weight: 600;
+	}
+	h5.custom1{
+		color:rgba(80,80,80,0.8);
+		font-weight: 600;
+		line-height: 30px;
+	}
+	h4.custom1{
+		border-bottom: 1px solid #bcbcbc;
+	}
+    .namebox { padding: 30px 30px;  border-radius: 15px; color:white;background-color:rgba(0,0,30,0.5);}
+</style>
 <!-- Page Header -->
 {% if page.background %}
   <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
     <header class="masthead">
     {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-              <span class="subheading">{{ site.description }}</span>
-            {% endif %}
+    <div class="container" style="padding:100px 0;">
+      <div class="row" style="width:100%;margin:auto;">
+        <div class="col-lg-8 col-md-8 mx-auto">
+          <div class="namebox">
+			<img src='/img/profile.png' style="margin-right:30px; float:left; width:170px">
+			<h2 style= "margin-top:0px;margin-bottom:15px;"> KI-HYUN KIM </h2>
+			<h5> Undergraduate Student </h5>
+			<h6> Dept. of Electrical and Computer Engineering <br> Seoul National University <br><br>
+		      <i class="fa fa-envelope"></i>
+			  &nbsp;&nbsp;haha802@naver.com</h6>
           </div>
         </div>
       </div>
@@ -25,41 +48,72 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-12 col-md-12 mx-auto">
+ 		<article style="background-color:white;font-size:70px;text-align:center;padding:50px;">
+	      <i class="fa fa-lightbulb-o"></i>
+ 		  <h1 style="text-align:center"> Research Interests</h1>
+		  <hr>
+		  <h4 class="custom0"><br>Compression sensing and sparse signal recovery,</h4>
+		  <h4 class="custom0">Optimization for communication systems</h4>
+		
+		</article>
+        <hr>
+		<article style="background-color:white;font-size:80px;text-align:center;padding:50px;">
+		  <i class="fa fa-graduation-cap"></i>		
+		  <h1 style="text-align:center">Education<br><br></h1>
+		  
+		  
+		  <div class="row">
+		    <div class="col-lg-2 col-md-2 ml-auto">
+		      <img src='/img/snu_mark.png' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-lg-6 col-md-6 mr-auto"style="text-align:left"> 
+		      <h4 class="custom1"><br>Seoul National University</h4>
+		      <h5 class="custom1">Dept. of Electrical and Computer Engineering <br> Undergraduate Student (Spring 2014 - Present)
+		      <br> Total GPA : <strong>4.13/4.3</strong> <br> </h5>
+		    </div>
+		  </div>
+		  
+		  
+		  <h1><br></h1>
+		  
+		  
+		  <div class="row">
+		    <div class="col-lg-2 col-md-2 ml-auto">
+		      <img src='/img/sshs_mark.png' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-lg-6 col-md-6 mr-auto"style="text-align:left;"> 
+		      <h4 class="custom1"><br>Seoul Science High School</h4>
+		      <h5 class="custom1"> 1 Year Early Admission (Spring 2011 - Fall 2013)
+		      <br> Total GPA : <strong>4.09/4.3</strong> <br> </h5>
+		    </div>
+		  </div>
+		</article>
+		
+		
+        <hr>
+		
+		
+	    <article style="background-color:white;font-size:80px;text-align:center;padding:50px;">
+		<i class="fa fa-building-o"></i>
+		<h1 style="text-align:center">Work Experience<br><br></h1>
 
-        {{ content }}
-
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-          <article class="post-preview">
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-              <h2 class="post-title">{{ post.title }}</h2>
-              {% if post.subtitle %}
-                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-              {% else %}
-                <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-              {% endif %}
-            </a>
-            <p class="post-meta">Posted by
-              {% if post.author %}
-                {{ post.author }}
-              {% else %}
-                {{ site.author }}
-              {% endif %}
-              on
-              {{ post.date | date: '%B %d, %Y' }}</p>
-          </article>
-
-          <hr>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
-
+		  <div class="row">
+		    <div class="col-lg-2 col-md-2 ml-auto">
+		      <img src='/img/snu_mark.png' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-lg-6 col-md-6 mr-auto"style="text-align:left"> 
+		      <h4 class="custom1"><br>Seoul National University</h4>
+		      <h5 class="custom1">Dept. of Electrical and Computer Engineering <br> Undergraduate Student (Spring 2014 - Present)
+		      <br> Total GPA : <strong>4.13/4.3</strong> <br> </h5>
+		    </div>
+		  </div>
+		  <h1><br></h1>
+		  
+		  
+		
+		</article>
+		<hr>
       </div>
     </div>
   </div>
