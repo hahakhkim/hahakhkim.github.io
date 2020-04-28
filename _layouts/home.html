@@ -1,65 +1,315 @@
 ---
 layout: default
 ---
-
+<style type="text/css">
+	body{
+		background-color: rgb(255,255,255);
+	}
+	h4.custom0{
+		color:rgba(80,80,80,0.8);
+		font-weight: 600;
+	}
+	h5.custom1{
+		color:rgba(50,50,50,0.8);
+		font-weight: 600;
+		line-height: 40px;
+	}
+	h5.custom2{
+		color:rgba(50,50,50,0.6);
+		font-weight: 600;
+		line-height: 30px;
+	}
+	h6.custom1{
+		color:rgba(50,50,50,0.8);
+		font-weight: 600;
+		line-height: 30px;
+	}
+	h6.custom2{
+		color:rgba(50,50,50,0.6);
+		font-weight: 600;
+		line-height: 30px;
+	}
+	h4.custom1{
+		border-bottom: 1px solid #bcbcbc;
+	}
+	li { margin: 0 0px; display: inline;}
+	ul { text-align: center; }
+	article{
+		background-color:white;font-size:60px;border-radius: 15px;text-align:center;padding:40px;border-style:dashed;
+		border-color: rgb(180,180,180);border-width: 2px;
+	}
+    .namebox { padding: 30px 30px;  border-radius: 15px; color:white;background-color:rgba(0,0,30,0.5);}
+</style>
 <!-- Page Header -->
 {% if page.background %}
   <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
     <header class="masthead">
     {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-              <span class="subheading">{{ site.description }}</span>
-            {% endif %}
+    <div class="container" style="padding:100px 0;">
+      <div class="row" style="width:100%;margin:auto;">
+        <div class="col-lg-9 col-md-9 mx-auto">
+          <div class="namebox">
+			<div class="row">
+			  <div class="col-sm-3 col-md-3 ml-auto">
+			    <img src='/img/profile.png' style="width:100%; margin:auto;">
+			  </div>
+			  <div class="col-sm-8 col-md-8 mr-auto">
+			    <h2 style= "margin-top:0px;margin-bottom:15px;"> Kihyun Kim </h2>
+			    <h6>Dept. of Electrical and Computer Engineering, <br> Seoul National University
+				<br><br>
+		        <i class="fa fa-address-book"></i>
+			    &nbsp;&nbsp;1, Gwanak-ro, Gwanak-gu, Seoul 08826, Republic of Korea
+				<br><br>
+		        <i class="fa fa-envelope"></i>
+			    &nbsp;&nbsp;hahakhkim@snu.ac.kr
+				<br><br>
+		        <i class="fa fa-phone"></i>
+			    &nbsp;&nbsp;(+82)-10-4266-3073</h6>
+			  </div>
+			</div>
           </div>
         </div>
       </div>
     </div>
   </header>
+  
+  
+  
+  
+  <div class="col-sm-8 col-md-8 mx-auto">
+  <article>
+    <div class="col-sm-12 col-md-12 mx-auto">
+    <ul class="nav nav-tabs nav-fill" style="text-align: center">
+      <li class="nav-item"><a class="nav-link active" href="#education" data-toggle="tab"><i class="fa fa-graduation-cap"></i><h5>Education<br>&nbsp;</h5></a></li>
+      <li class="nav-item"><a class="nav-link" href="#publication" data-toggle="tab"><i class="fa fa-file-text-o"></i><h5>Publication<br>&nbsp;</h5></a></li>
+      <li class="nav-item"><a class="nav-link" href="#research" data-toggle="tab"><i class="fa fa-lightbulb-o"></i><h5>Research<br>Experience</h5></a></li>
+	  <li class="nav-item"><a class="nav-link" href="#honors" data-toggle="tab"><i class="fa fa-trophy"></i><h5>Honors<br>& Awards</h5></a></li>
+	  <li class="nav-item"><a class="nav-link" href="#activities" data-toggle="tab"><i class="fa fa-building-o"></i><h5>Work & Teaching<br>Experience</h5></a></li>
+    </ul>
+	</div>
+  <div class="tab-content">
+   <!-- #################### Education########################-->	
+    <div role="tabpanel" class="tab-pane fade show active" id="education">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+		<h1><br></h1>
+		
+		  <div class="row">
+		    <div class="col-sm-2 col-md-2 ml-auto">
+		      <img src='/img/snu_mark.png' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-sm-9 col-md-9 mr-auto"style="text-align:left"> 
+		      <h4 class="custom1">Seoul National University</h4>
+		      <h6 class="custom1">Bachelor of Science in Electrical and Computer Engineering (Spring 2014 - Spring 2020)*
+		      <br> Total GPA : <strong>4.14/4.3</strong> &nbsp;&nbsp; Major GPA : <strong>4.25/4.3</strong>
+			  <br> Graduated with <strong>Summa Cum Laude</strong> </h6>
+			  <h6 class="custom2"> * Paused two years for mandatory military service in Republic of Korea (Dec. 2016 - Sep. 2018)</h6>
+			  <h6 class="custom1">Thesis:			 
+			  <br>Advisor: Prof. Insoon Yang </h6>
+		    </div>
+		  </div>
 
-        {{ content }}
-
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-          <article class="post-preview">
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-              <h2 class="post-title">{{ post.title }}</h2>
-              {% if post.subtitle %}
-                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-              {% else %}
-                <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-              {% endif %}
-            </a>
-            <p class="post-meta">Posted by
-              {% if post.author %}
-                {{ post.author }}
-              {% else %}
-                {{ site.author }}
-              {% endif %}
-              on
-              {{ post.date | date: '%B %d, %Y' }}</p>
-          </article>
-
-          <hr>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
-
-      </div>
+		<h1><br></h1>		  
+		
+		  <div class="row">
+		    <div class="col-sm-2 col-md-2 ml-auto">
+		      <img src='/img/sshs_mark.png' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-sm-9 col-md-9 mr-auto"style="text-align:left;"> 
+		      <h4 class="custom1">Seoul Science High School</h4>
+		      <h6 class="custom1"> Spring 2011 - Fall 2013  <br> High school for talented students in science and mathematics
+		      <br> Total GPA : <strong>4.09/4.3</strong> <br> </h5>
+		    </div>
+		  </div>
+		  
+		<h1><br></h1>	
     </div>
+
+    <div role="tabpanel" class="tab-pane fade show" id="publication">
+		<!-- #################### Publication ########################-->	
+
+		<h1><br></h1>
+		<div class="row">
+			<div class="col-sm-11 col-md-11 mx-auto"style="text-align:left"> 
+		      <h5>Minimax Control of Ambiguous Linear Stochastic Systems Using the Wasserstein Metric</h5>
+		      <h6 class="custom1"><strong>Kihyun Kim</strong> and Insoon Yang</h6>
+			  <h6 class="custom1"> IEEE Conference on Decision and Control (CDC), 2020. (Under Review)</h6>
+			  <a href="https://arxiv.org/pdf/2003.13258.pdf">
+			    <h6 class="custom2">Click here to see</h6>
+			  </a>
+		    </div>
+		</div>
+
+		<h1><br></h1>
+		
+		<div class="row">
+			<div class="col-sm-11 col-md-11 mx-auto"style="text-align:left"> 
+		      <h5>Generative Autoregressive Networks for 3D Dancing Move Synthesis From Music</h5>
+		      <h6 class="custom1">Hyemin Ahn, Jaehun Kim, <strong>Kihyun Kim</strong>, and Songhwai Oh</h6>
+			  <h6 class="custom1"> IEEE Robotics and Automation Letters (RA-L), 2020.</h6>
+			  <a href="https://ieeexplore.ieee.org/abstract/document/9019619">
+			    <h6 class="custom2">Click here to see</h6>
+			  </a>
+		    </div>
+		</div>
+
+
+
+
+	</div>
+
+	<!-- #################### Research Experience ########################-->	
+    <div role="tabpanel" class="tab-pane fade show" id="research">
+
+		<h1><br></h1>
+
+  		  <div class="row">
+		    <div class="col-sm-3 col-md-3 ml-auto">
+		      <img src='/img/intern_4.png' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-sm-8 col-md-8 mr-auto"style="text-align:left"> 
+		      <h4 class="custom1">Control and Optimization Research Lab,<br> Seoul National Unviersity</h4>
+		      <h6 class="custom1">Mar 2019 - Present<br> Advisor : Professor Insoon Yang </h6>
+		      <h6 class="custom2">  <br>
+			  -  <br> - </h6>
+		    </div>
+		  </div>
+		  
+		  <h1><br></h1>
+		  
+		  <div class="row">
+
+			<div class="col-md-11 mx-auto"style="text-align:left"> 
+		      <h4 class="custom1">Robot Learning Lab, Seoul National Unviersity</h4>
+		      <h6 class="custom1">July 2019 - September 2019<br> Advisor : Professor Songhwai Oh </h6>
+		    </div>
+		    <div class="col-md-9 mx-auto">
+		      <img src='/img/intern_3.jpg' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-md-11 mx-auto"style="text-align:left"> 
+		      <h6 class="custom1"> - Paper <br> Hyemin Ahn, Jaehun Kim, <strong>Kihyun Kim</strong>, and Songhwai Oh, "Generative Autoregressive Networks for 3D Dancing Move Synthesis from Music"</h6>
+			  <h6 class="custom2"> - Dancing motion generation using  <br> - Joint states planning & execution of dancing trajectory on humanoid robot NAO</h6>
+		    </div>
+		  </div>
+
+		  <h1><br></h1>
+		  
+		  <div class="row">
+  			<div class="col-sm-8 col-md-8 ml-auto"style="text-align:left"> 
+		      <h4 class="custom1">Nano/Micro systems & controls Lab,<br> Seoul National Unviersity</h4>
+		      <h6 class="custom1">July 2016 - December 2016<br> Advisor : Professor Dong-il Dan Cho </h6>
+
+		      <h6 class="custom2"> RGB-D Camera based object detection on mobile robot <br>
+			  - Object recognition algorithm <br> - Classification of RGB-D image using CNN</h6>
+		    </div>
+		    <div class="col-sm-3 col-md-3 mr-auto">
+		      <img src='/img/intern_2.png' style="width:100%;margin:auto;">
+		    </div>
+		  </div>
+
+		  <h1><br></h1>
+		  
+		  <div class="row">
+		  	<div class="col-sm-3 col-md-3 ml-auto">
+		      <img src='/img/intern_1.png' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-sm-8 col-md-8 mr-auto"style="text-align:left"> 
+		      <h4 class="custom1">Vehicle Intelligence Lab,<br> Seoul National Unviersity</h4>
+		      <h6 class="custom1">January 2016 - June 2018<br> Advisor : Professor Seung-Woo Seo</h6>
+		      <h6 class="custom2"> 3D LIDAR based object recognition for autonomous vehicle <br>
+			  - Voxel-based 3D point cloud segmentation<br> - SVM-based classification of pedestrian, vehicle, and others</h5>
+		    </div>
+		  </div>
+		  <h1><br></h1>
+    </div>
+	
+	
+	
+    <div role="tabpanel" class="tab-pane fade show" id="honors">
+	<!-- #################### Honors and Awards ########################-->
+
+		<h1><br></h1>
+		  
+		  <div class="row">
+			<div class="col-sm-11 col-md-11 mx-auto"style="text-align:left"> 
+		      <h4>Kwon Oh-hyun* Scholarship <span style="float:right;">2019</span></h4>
+		      <h6 class="custom1">Scholarship award from Foundation for Electronics, Electrical and Computer Engineering, Seoul National University</h6>
+			  <h6 class="custom2"> * CEO of Samsung Electronics</h6>
+		    </div>
+		  </div>
+		  
+ 		  <h2><br></h2>
+		  
+		  <div class="row">
+			<div class="col-sm-11 col-md-11 mx-auto"style="text-align:left"> 
+		      <h4>Blue Lighthouse Scholarship <span style="float:right;">2019</span></h4>
+		      <h6 class="custom1">Scholarship award for students majoring in Electrical Engineering, from Korea Student Aid Foundation</h6>
+		    </div>
+		  </div>
+		
+		<h2><br></h2>
+		  
+		  <div class="row">
+			<div class="col-sm-11 col-md-11 mx-auto"style="text-align:left"> 
+		      <h4>Seoam Sholarship for Undergraduate Students <span style="float:right;">2014 - 2019</span></h4>
+		      <h6 class="custom1">Scholarship program from Seoam Yoon Seyeong* Foundation </h6>
+			  <h6 class="custom2"> * Founder of Seoul Broadcasting System</h6>
+		    </div>
+		  </div>
+		  
+		  		  <h2><br></h2>
+		  
+		  <div class="row">
+			<div class="col-sm-11 col-md-11 mx-auto"style="text-align:left"> 
+		      <h4>ACM International Collegiate Programming Contest, Korea Regional, 6th place <span style="float:right;">2015</span></h4>
+		    </div>
+		  </div>
+		  
+        <h1><br></h1>
+		
+    </div>
+	
+    <div role="tabpanel" class="tab-pane fade show" id="activities">
+	<!-- #################### Work & Teaching Experience ########################-->
+
+		<h1><br></h1>
+		
+		  <div class="row">
+		    <div class="col-sm-2 col-md-2 ml-auto">
+		      <img src='/img/mnd_mark.gif' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-sm-9 col-md-9 mr-auto"style="text-align:left"> 
+		      <h4>Republic of Korea Army</h4>
+		      <h6 class="custom1">December 2016 - September 2018</h6>
+			  <h6 class="custom2"> Mandatory military service in South Korea <br> Specialization: Signal Intelligence<br> </h6>
+		    </div>
+		  </div>
+		  <h2><br></h2>
+		  
+		  <div class="row">
+			<div class="col-sm-11 col-md-11 mx-auto"style="text-align:left"> 
+		      <h4>Mathematics Olympiad Online Instructor at &nbsp;&nbsp;<a href="https://privatenote.co.kr/"><img src='/img/logo_pn.png' style="padding: 5px;border-radius:5px;border: solid 2px;"></a></h4>
+		      <h6 class="custom1">August 2015 - March 2016</h6>
+			  <h6 class="custom2">
+			  Privatenote Co. provides internet lectures for students who prepare for mathematics and science olympiad in South Korea <br> My lectures cover
+			  <strong>Number theory, Algebra, and Geometry</strong><br> </h6>
+		    </div>
+		  </div>
+		  <h2><br></h2>
+		  
+		  <div class="row">
+		    <div class="col-sm-2 col-md-2 ml-auto">
+		      <img src='/img/game.png' style="width:100%;margin:auto;">
+		    </div>
+			<div class="col-sm-9 col-md-9 mr-auto"style="text-align:left"> 
+		      <h4>Game Development<br></h4>
+		      <h6 class="custom1"> I developed Android mobile games in SNU mobile application development club "Appey Road"</h6>
+		      <a href="https://play.google.com/store/apps/developer?id=Killer+King">
+			    <h6 class="custom2">Click here to see! (Available in Korea)</h6>
+			  </a>
+		    </div>
+		  </div>
+		  <h2><br></h2>
+    </div>
+	</article>
   </div>

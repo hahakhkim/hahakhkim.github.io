@@ -1,23 +1,27 @@
 ---
 layout: default
 ---
+<style type="text/css">
 
+	h1.custom{
+	text-align: center;
+	color:rgba(50,50,100,1);
+	font-size: 50px;
+	}
+</style>
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header class="masthead" style="height:400px;background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
 {% else %}
 <header class="masthead">
 {% endif %}
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
+  <div class="container"style="height:400px;padding:150px 0;">
+    <div class="row" style="width:100%;margin:auto;">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="page-heading">
-          <h1>{{ page.title }}</h1>
+          <h1 class="custom">{{ page.title }}</h1>
           {% if page.description %}
             <span class="subheading">{{ page.description }}</span>
           {% endif %}
-        </div>
       </div>
     </div>
   </div>
