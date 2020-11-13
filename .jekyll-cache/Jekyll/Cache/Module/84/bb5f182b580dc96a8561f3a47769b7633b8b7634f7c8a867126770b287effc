@@ -1,8 +1,8 @@
-I"£<!--
+I"Y<!--
 <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>Follow:</strong></li>
+      <li><strong>Contact:</strong></li>
     
 
     
@@ -25,5 +25,5 @@
   </ul>
 </div>
 -->
-<div class="page__footer-copyright">&copy; 2020 Kihyun Kim. </div>
+<div class="page__footer-copyright">&copy; 2020 Kihyun Kim. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 :ET
