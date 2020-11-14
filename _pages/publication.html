@@ -2,38 +2,47 @@
 title:
 permalink: /publication/
 ---
+<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/vendor/jquery/jquery.min.js"></script>
 <style type="text/css">
-
+	a:link {
+		text-decoration: none;
+	}
+	button.btn{
+	  background-color: #4b0082;
+	  color: white;
+	  font-size: 0.7em;
+	}
+	button {
+	  transition-duration: 0.4s;
+	}
+	button:hover {
+	  background-color: skyblue; /* Green */
+	  color: white;
+	}
 	h6.custom1{
 		font-size: 0.7em;
 		font-weight: 450;
-		margin-top: 0.8em;
-		margin-bottom: 0.8em;
 		line-height: 1.5em;
 	}
 	h6.custom2{
 		font-size: 0.7em;
 		color:rgba(50,50,50,0.8);
 		font-weight: 450;
-		margin-top: 0.8em;
-		margin-bottom: 0.8em;	
 		line-height: 1.5em;		
 	}
 	h5.custom1{
 		border-bottom: 1px solid #bcbcbc;
-		margin-top: 0.8em;
-		margin-bottom: 0.8em;
 		line-height: 1.5em;		
 	}
 	h5.custom2{
 		font-size: 0.9em;
-		margin-top: 0.8em;
-		margin-bottom: 0.8em;
 		line-height: 1.5em;
 	}
 	
 </style>
-<h1><i class="fas fa-file-alt"></i>&nbsp; Publication</h1>
+<h4><i class="fas fa-file-alt"></i>&nbsp; Publication</h4>
 <hr>
 <div class="container-fluid">
 	<div class="row">
@@ -41,17 +50,24 @@ permalink: /publication/
 		  <h5 class="custom2">[1] Minimax Control of Ambiguous Linear Stochastic Systems Using the Wasserstein Metric</h5>
 		  <h6 class="custom1"><strong>Kihyun Kim</strong> and Insoon Yang</h6>
 		  <h6 class="custom1"> Proceedings of the 59th IEEE Conference on Decision and Control (CDC), 2020. (Accepted)</h6>
-		  <a href="https://arxiv.org/abs/2003.13258">
-			<h6 class="custom2">Click here to see</h6>
-		  </a>
-		  <h6 class="custom1"> <strong>Abstract:</strong> In this paper, we propose a minimax linear-quadratic control method to address the issue of inaccurate distribution information in practical stochastic systems.
-		  To construct a control policy that is robust against errors in an empirical distribution of uncertainty, our method is to adopt an adversary, which selects the worst-case distribution.
-		  To systematically adjust the conservativeness of our method, the opponent receives a penalty proportional to the amount, measured with the Wasserstein metric, of deviation from the empirical distribution.
-		  In the finite-horizon case, using a Riccati equation, we derive a closed-form expression of the unique optimal policy and the opponent's policy that generates the worst-case distribution.
-		  This result is then extended to the infinite-horizon setting by identifying conditions under which the Riccati recursion converges to the unique positive semi-definite solution to an associated algebraic Riccati equation (ARE).
-		  The resulting optimal policy is shown to stabilize the expected value of the system state under the worst-case distribution.
-		  We also discuss that our method can be interpreted as a distributional generalization of the H∞-method.
-		  </h6>
+			<button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+				See Abstract
+			</button>
+			<button class="btn" type="button" onclick="window.open('https://arxiv.org/abs/2003.13258')">
+				See Full Article
+			</button>
+			<div class="collapse" id="collapseExample">
+				<div class="card card-body">
+				<h6 class="custom1">  In this paper, we propose a minimax linear-quadratic control method to address the issue of inaccurate distribution information in practical stochastic systems.
+					  To construct a control policy that is robust against errors in an empirical distribution of uncertainty, our method is to adopt an adversary, which selects the worst-case distribution.
+					  To systematically adjust the conservativeness of our method, the opponent receives a penalty proportional to the amount, measured with the Wasserstein metric, of deviation from the empirical distribution.
+					  In the finite-horizon case, using a Riccati equation, we derive a closed-form expression of the unique optimal policy and the opponent's policy that generates the worst-case distribution.
+					  This result is then extended to the infinite-horizon setting by identifying conditions under which the Riccati recursion converges to the unique positive semi-definite solution to an associated algebraic Riccati equation (ARE).
+					  The resulting optimal policy is shown to stabilize the expected value of the system state under the worst-case distribution.
+					  We also discuss that our method can be interpreted as a distributional generalization of the H∞-method.
+					  </h6>
+				</div>	  
+			</div>
 		</div>
 	</div>
 
@@ -62,16 +78,23 @@ permalink: /publication/
 		  <h5 class="custom2">[2] Generative Autoregressive Networks for 3D Dancing Move Synthesis From Music</h5>
 		  <h6 class="custom1">Hyemin Ahn, Jaehun Kim, <strong>Kihyun Kim</strong>, and Songhwai Oh</h6>
 		  <h6 class="custom1"> IEEE Robotics and Automation Letters (RA-L), 2020.</h6>
-		  <a href="https://ieeexplore.ieee.org/abstract/document/9019619">
-			<h6 class="custom2">Click here to see</h6>
-		  </a>
-		  <h6 class="custom1"> <strong>Abstract:</strong> This letter proposes a framework which is able to generate a sequence of three-dimensional human dance poses for a given music.
+		  	<button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+				See Abstract
+			</button>
+			<button class="btn" type="button" onclick="window.open('https://ieeexplore.ieee.org/abstract/document/9019619')">
+				See Full Article
+			</button>
+			<div class="collapse" id="collapseExample2">
+			<div class="card card-body">
+				<h6 class="custom1"> This letter proposes a framework which is able to generate a sequence of three-dimensional human dance poses for a given music.
 		  The proposed framework consists of three components: a music feature encoder, a pose generator, and a music genre classifier.
 		  We focus on integrating these components for generating a realistic 3D human dancing move from music, which can be applied to artificial agents and humanoid robots.
 		  The trained dance pose generator, which is a generative autoregressive model, is able to synthesize a dance sequence longer than 1,000 pose frames.
 		  Experimental results of generated dance sequences from various songs show how the proposed method generates human-like dancing move to a given music.
 		  In addition, a generated 3D dance sequence is applied to a humanoid robot, showing that the proposed framework can make a robot to dance just by listening to music.
-		  </h6>
+			  </h6>
+			</div>	  
+			</div>
 		</div>
 	</div>
 	<h1><br></h1>
